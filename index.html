@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIY Server Rack Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif; }
+  body { background-color:#f5f5f5; color:#222; line-height:1.5; }
+
+  /* Header */
+  header { background:#111; color:#fff; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
+  header h1 { font-weight:700; font-size:1.8rem; letter-spacing:1px; }
+  nav a { color:#fff; text-decoration:none; margin-left:20px; font-weight:500; transition:0.2s; }
+  nav a:hover { color:#ffd600; }
+
+  /* Hero */
+  .hero { background:#222 url('https://images.unsplash.com/photo-1591696331111-cf5c3f820b39?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; color:#fff; padding:100px 40px; text-align:center; }
+  .hero h2 { font-size:3rem; margin-bottom:20px; }
+  .hero p { font-size:1.2rem; margin-bottom:40px; }
+  .hero button { background:#ffd600; border:none; padding:15px 30px; font-size:1rem; font-weight:600; cursor:pointer; transition:0.2s; }
+  .hero button:hover { background:#ffbf00; }
+
+  /* Product Grid */
+  .products { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; padding:60px 40px; }
+  .product-card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.2s; }
+  .product-card:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+  .product-card img { width:100%; height:200px; object-fit:cover; }
+  .product-info { padding:20px; }
+  .product-info h3 { font-size:1.2rem; margin-bottom:10px; }
+  .product-info p { font-size:0.95rem; color:#555; margin-bottom:15px; }
+  .product-info span { font-weight:700; font-size:1rem; color:#111; }
+  .product-info button { background:#111; color:#fff; border:none; padding:10px 20px; cursor:pointer; transition:0.2s; }
+  .product-info button:hover { background:#222; }
+
+  /* Features / Info Section */
+  .features { background:#fff; padding:60px 40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; text-align:center; }
+  .feature-card { padding:20px; border:1px solid #eee; border-radius:10px; transition:0.2s; }
+  .feature-card:hover { transform:translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+  .feature-card h3 { margin-bottom:10px; font-size:1.2rem; }
+  .feature-card p { color:#555; }
+
+  /* Footer */
+  footer { background:#111; color:#fff; padding:60px 40px; text-align:center; }
+  footer a { color:#ffd600; text-decoration:none; margin:0 10px; }
+  footer a:hover { text-decoration:underline; }
+
+  /* Contact Section */
+  .contact-info { margin-top:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+  .contact-info div { background:#222; padding:15px 25px; border-radius:8px; min-width:200px; }
+  .contact-info div p { color:#fff; margin-bottom:5px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>DIY Server Rack Shop</h1>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Build Your Own Server Rack!</h2>
+  <p>From Raspberry Pis to network switches, everything you need to set up your DIY server is here.</p>
+  <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+</section>
+
+<section id="products" class="products">
+  <!-- Server Racks -->
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1581091215367-7f49f32a44f3?auto=format&fit=crop&w=800&q=80" alt="Server Rack">
+    <div class="product-info">
+      <h3>19-inch Server Rack</h3>
+      <p>Sturdy and customizable rack for all your servers.</p>
+      <span>$199</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1602526219870-5ef53b9b8e91?auto=format&fit=crop&w=800&q=80" alt="Mini Server Rack">
+    <div class="product-info">
+      <h3>Mini 12U Rack</h3>
+      <p>Compact server rack for small setups and home labs.</p>
+      <span>$129</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Raspberry Pis -->
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1610389587440-0d930f2f3b23?auto=format&fit=crop&w=800&q=80" alt="Raspberry Pi 5">
+    <div class="product-info">
+      <h3>Raspberry Pi 5</h3>
+      <p>Perfect for DIY servers, retro gaming, and IoT projects.</p>
+      <span>$79</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1585079549640-9eecdb49b930?auto=format&fit=crop&w=800&q=80" alt="Raspberry Pi Accessories">
+    <div class="product-info">
+      <h3>Raspberry Pi Starter Kit</h3>
+      <p>Includes power supply, SD card, case, and heatsinks.</p>
+      <span>$49</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Network Switches -->
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44394f?auto=format&fit=crop&w=800&q=80" alt="Network Switch">
+    <div class="product-info">
+      <h3>8-Port Network Switch</h3>
+      <p>Reliable Gigabit switch to connect all your devices.</p>
+      <span>$49</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1581091012184-fc1b8f3d89b2?auto=format&fit=crop&w=800&q=80" alt="16-Port Switch">
+    <div class="product-info">
+      <h3>16-Port Managed Switch</h3>
+      <p>Advanced switch for larger DIY server setups.</p>
+      <span>$119</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Accessories -->
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44394f?auto=format&fit=crop&w=800&q=80" alt="Server Accessories">
+    <div class="product-info">
+      <h3>Server Accessories Kit</h3>
+      <p>Cables, screws, fans, and more for your rack setup.</p>
+      <span>$29</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1591696331120-cf5c3f820b40?auto=format&fit=crop&w=800&q=80" alt="UPS Power Supply">
+    <div class="product-info">
+      <h3>UPS Backup Power</h3>
+      <p>Keep your servers running safely during power outages.</p>
+      <span>$99</span><br><br>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="feature-card">
+    <h3>Modular Setup</h3>
+    <p>Build your rack exactly how you need it. Expandable and customizable.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Reliable Components</h3>
+    <p>All products are tested and verified for high performance and durability.</p>
+  </div>
+  <div class="feature-card">
+    <h3>DIY Friendly</h3>
+    <p>Step-by-step guides included for Raspberry Pis, switches, and racks.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Worldwide Shipping</h3>
+    <p>We ship to most countries with tracking included for every order.</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <div>
+      <p>Email:</p>
+      <a href="mailto:support@diyservershop.com">support@diyservershop.com</a>
+    </div>
+    <div>
+      <p>Discord:</p>
+      <a href="https://discord.gg/example" target="_blank">Join our Discord</a>
+    </div>
+    <div>
+      <p>Phone:</p>
+      <p>+1 555 123 4567</p>
+    </div>
+    <div>
+      <p>Twitter:</p>
+      <a href="#" target="_blank">@DIYServerShop</a>
+    </div>
+    <div>
+      <p>Instagram:</p>
+      <a href="#" target="_blank">@DIYServerShop</a>
+    </div>
+    <div>
+      <p>GitHub:</p>
+      <a href="#" target="_blank">github.com/DIYServerShop</a>
+    </div>
+  </div>
+  <p style="margin-top:30px;">&copy; 2026 DIY Server Rack Shop</p>
+</footer>
+
+</body>
+</html>
